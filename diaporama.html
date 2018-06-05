@@ -13,7 +13,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" int
 </head>
 <body>
     <!-- Tout le contenu d'une page Boostrap est dans une div class container -->
-    <div class="container-fluid">
+    <div class="container">
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> <!-- la nav est class navbar sur fond sombre, avec un bg (un background) et s'étend sur un lg un écran large-->
             <a href="index.html" class="navbar-brand">initiationBoostrap 4</a>
              <!-- le bouton pour le menu responsive -->
@@ -23,8 +23,8 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" int
             <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- la ul est dans une div avec class id -->
                 <!-- Une navbar faite avec boostrap -->
                 <ul class="navbar-nav ml-auto"> <!-- navbar-nav supprime les puces ml-auto empêcher le débordement de la navbar -->
-                    <li class="nav-item"><a href="index.html" class="nav-link active">Accueil</a></li>
-                    <li class="nav-item"><a href="diaporama.html" class="nav-link">Diaporama</a></li>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="diaporama.html" class="nav-link active">Diaporama</a></li>
                     <!-- ici nous mettons un menu déroulant -->
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Voir nos produits</a>
@@ -42,12 +42,60 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" int
         </nav>
         <!-- ici on va mettre une section en plaine largeur sous la nav "a hero section", chez Boostrap un "Jumbotron" c'est un composant -->
         <div class="jumbotron">
-            <h1 class="display-4">À la une ce lundi 04 juin 2018 : bientôt l'été !!!</h1>
-            <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nihil consequuntur, aut sint voluptatibus ut aliquam voluptatum hic veritatis. Debitis exercitationem, iure nemo earum pariatur aliquam odit accusantium incidunt quasi.</p>
-            <p class="lead">
+            <h1 class="display-4">Les plus belles destinations de vacances !!!</h1>
+            <!-- <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nihil consequuntur, aut sint voluptatibus ut aliquam voluptatum hic veritatis. Debitis exercitationem, iure nemo earum pariatur aliquam odit accusantium incidunt quasi.</p> -->
+           <!--  <p class="lead">
                 <a href="#" class="btn btn-lg btn-primary" role="button">Préparez l'été...</a>
-            </p>    
+            </p>   -->  
         </div> <!-- fin de la div class jumbotron  -->
+
+        
+        <div class="row fond_orange mb-4">
+            <div class="col-lg-12 center-block">
+                <div id="carousel01" class="carousel slide" data-ride="carousel"> <!-- le diaporama est dans une div avec un id -->
+                    <!-- ici on place les indicateurs -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#carousel01" data-slide-to="0" class="active"></li>
+                        <li data-target="#carousel01" data-slide-to="1"></li>
+                        <li data-target="#carousel01" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner"> <!-- tous les items du diaporama sont dans une div avec la class carousel-inner et data-ride -->
+                        <div class="carousel-item active">
+                            <img src="img/atlasetlamontagne.jpg" alt="Atlas" class="w-100 d-block">
+                            <!-- et ici la légende de la photo -->
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Une vue de l'Atlas</h5>
+                                <p>En été, la montagne est belle</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/unjourunerando.jpg" alt="Rando" class="w-100 d-block">
+                           <div class="carousel-caption d-none d-md-block">
+                                <h5>Une rando</h5>
+                                <p>Une belle journée de découverte</p>
+                           </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/stlouis.jpg" alt="St Louis" class="w-100 d-block">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>La spédéologie</h5>
+                                <p>Une expérience inoubliable</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- ici nous plaçons les liens de controles du diaporama -->
+                    <a href="#carousel01" role="button" class="carousel-control-prev" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Precedent</span> 
+                    </a>
+                    <!-- sr= screen reader -->
+                  <a href="#carousel01" role="button" class="carousel-control-next" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Suivant</span>
+                  </a>
+                </div><!--  fin du diaporama -->      
+            </div>
+        </div><!-- fin rangée-->
     <!-- ici commence la grille de bootstrap avec une rangée et des colonnes-->
         <div class="row">
             <div class="col-sm-12 col-md-4"><!-- col-sm-12 sur un écran small 12 col de largeur, sur un écran medium 4 col de largeur -->
@@ -85,25 +133,7 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" int
                   <p class="lead">Un paragraphe class lead</p> <!-- la class lead vient après un titre -->
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis illum nostrum fugiat ipsum dolorem molestias aperiam sequi pariatur delectus ratione aut at, quos quasi eum et voluptatum doloribus, corporis quia.</p>
               </div>
-              <div class="col-sm-12 col-md-4">
-                  <!-- Une navigation verticale -->
-                  <h3>Menu secondaire</h3>
-                  <ul class="nav flex-column nav-pills">
-                      <li class="nav-item">
-                          <a href="index.html" class="nav-link active">Accueil</a>
-                        </li>
-                      <li class="nav-item">
-                          <a href="#" class="nav-link">Lien 1</a>
-                        </li>
-                      <li class="nav-item">
-                          <a href="#" class="nav-link">Lien 2</a>
-                        </li>
-                      <li class="nav-item">
-                          <a href="#" class="nav-link">Lien 3</a>
-                        </li>
-                  </ul>
-                </div>
-            </div>   <!-- fin de la nouvelle rangée la rangée 3 -->
+            </div>
             <div class="row"><!--  rangée 4 -->
                     <div class="col-md-12 col-lg-3">
                         <h5>Col 1</h5>
@@ -139,6 +169,23 @@ href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" int
                         </div>
                     </div>
             </div>  <!-- fermeture de la rangée 4-->
+            <div class="row">
+                <div class="col-lg-2"></div>
+                    <div class="col-lg-8">
+                            <img src="img/montagne-panorama.jpg" class="img-fluid" alt="Responsive image">
+                    </div>
+                    <div class="col-lg-2"></div>
+                    <div class="col-lg-4">
+                            <img src="img/index.jpg" alt="Quel beau lac" class="img-thumbnail rounded float-left">
+                    </div>
+                    <div class="col-lg-4">
+                            <img src="img/banff_lakes_03.jpg" alt="Encore un beau lac" class="img-thumbnail rounded mx-auto d-block">
+                    </div>
+                    <div class="col-lg-4">
+                            <img src="img/tag_square_17.jpg" alt="Encore un beau lac turquoise" class="img-thumbnail rounded float-right">
+                    </div>
+            </div>
+
                     
  
     </div> <!-- fin de la class container1 -->

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Boostrap CSS -->  
+<link rel="stylesheet" 
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Initiation Boostrap 4 : accueil</title>
+<!-- feuille de style -->
+<!-- <link href="css/style.css" rel="stylesheet"> -->
+<style>
+.fond_orange {
+    background: orange;
+    height: 200px;
+}
+.fond_vert {
+    background: lightgreen;
+    height: 200px;
+}
+.bordure {
+    border: 1px solid #333;
+}
+.fond_vert {
+    background: green;
+}
+.fond_jaune {
+    background: yellow;
+}
+.fond_rouge {
+    background: red;
+}
+.fond_pink {
+    background: pink;
+}
+.fond_purple {
+    background: purple;
+}
+</style>
+</head>
+<body>
+    <!-- Tout le contenu d'une page Boostrap est dans une div class container -->
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary"> <!-- la nav est class navbar sur fond sombre, avec un bg (un background) et s'étend sur un lg un écran large-->
+            <a href="index.html" class="navbar-brand">initiationBoostrap 4</a>
+             <!-- le bouton pour le menu responsive -->
+             <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+             </button>            
+            <div class="collapse navbar-collapse" id="navbarSupportedContent"> <!-- la ul est dans une div avec class id -->
+                <!-- Une navbar faite avec boostrap -->
+                <ul class="navbar-nav ml-auto"> <!-- navbar-nav supprime les puces ml-auto empêcher le débordement de la navbar -->
+                    <li class="nav-item"><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li class="nav-item"><a href="diaporama.html" class="nav-link active">Diaporama</a></li>
+                    <!-- ici nous mettons un menu déroulant -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">Voir nos produits</a>
+                        <!-- les sous-rubriques de la rubrique produits dans une div class dropdown-menu -->
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">Produit 1</a>
+                            <a href="#" class="dropdown-item">Produit 2</a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item">Autres produits</a>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav> <!-- fin nav -->
+
+        <!-- rangée 1 -->
+        <div class="row bordure">
+            <div class="fond_orange col-sm-12 col-md-9 col-lg-7 offset-lg-1">Colonne1 <!-- offset 1 pousse de 1 vers la droite --> 
+            </div>
+            <div class="fond_vert col-sm-12 col-md-3 col-lg-2 offset-lg-2">Colonne2
+            </div>
+         </div>
+         <p class="clear"></p>
+         <div class="container">
+                <div class="row justify-content-md-center">
+                    <div class="fond_vert col col-lg-2">
+                    1 of 3
+                    </div>
+                    <div class="fond_jaune col-md-auto">
+                    Variable width content
+                    </div>
+                    <div class="fond_rouge col col-lg-2">
+                        3 of 3
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="fond_vert col">
+                        1 of 3
+                    </div>
+                    <div class="fond_jaune col-md-auto">
+                    Variable width content
+                    </div>
+                    <div class="fond_rouge col col-lg-2">
+                    3 of 3
+                    </div>
+                </div>
+        </div>
+        <p class="clear"></p>
+        <div class="row">
+                <div class="fond_pink col">col1</div>
+                <div class="fond_purple col">col2</div>
+                <div class="w-100"></div>
+                <div class="col">col3</div>
+                <div class="col">col4</div>
+        </div>
+        <footer class="mt-1">
+        <div class="bg-primary">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card-footer text-center text-warning">
+                        <div class="card-body">
+                            <p class="card-text">Le pied ,de page, c'est le pied !</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+    </div> <!-- fin div container -->
+    <!-- Optional Javascript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
